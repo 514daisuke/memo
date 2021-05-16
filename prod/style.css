@@ -10,12 +10,12 @@ body{
     padding:0;
     text-align:left;
     font-size: 32px;
+
 }
 
 /* ヘッダー処理 */
 header{
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
     text-align: center;
     margin: 3%;
     width: 95%;
@@ -39,6 +39,22 @@ p{
     border-bottom:1px solid #fff;
     height:200px;
 }
+
+/* addボタンの実装 */
+.add {
+  position: fixed;
+  right: 1rem;
+  background-color:chocolate;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* .add:active {
+  transform: scale(0.98);
+} */
 
 ul{
     padding: 0;
@@ -73,6 +89,42 @@ input{
 }
 textarea{
     height: 230px;
+}
+
+
+.memo {
+  background-color: #fff;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+  height: 400px;
+  width: 400px;
+  overflow-y: scroll;
+}
+
+.memo .tools {
+  background-color: #9ec862;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.memo .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.memo textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  height: 400px;
+  width: 100%;
+  padding: 20px;
 }
 
 

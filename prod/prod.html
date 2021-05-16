@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesomeを使う -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"  crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MemoKadai</title>
     <link rel="stylesheet" href="../prod/style.css">
@@ -11,24 +13,22 @@
 
 <body>
     <header>
-        <h1>頑張ってつくりたいシミュレータ</h1>
+        <h1>Memorou</h1>
     </header>
 
     <main>
-        <input type="text" id="input">
-        <textarea id="text_area"></textarea>
+            <button class="add" id="add">
+                <!-- Font Awesomeアイコンの使用  -->
+                <i class="fa fa-plus"></i> Memorou
+            </button>
 
-        <ul>
-            <li id="save">Save</li>
-            <li id="clear">Clear</li>
-        </ul>
 
     </main>
 
 
-    <footer class="footer_title">
+    <!-- <footer class="footer_title">
         copyrights 2020 G's Academy Fukuoka All RIghts Reserved.
-    </footer>
+    </footer> -->
 
     <!-- JQueryのプラグイン -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
