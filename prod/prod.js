@@ -40,12 +40,12 @@ function addNewMemo(text = '') {
     <textarea class="${text ? "hidden" : ""}"></textarea>
     `
     // markedは、HTMLに追加したプラグイン
-    main.innerHTML = marked(text)
+    //main.innerHTML = marked(text)
 
     // 削除のクリックイベントの登録
-    deleteBtn.addEventListener('click', () => {
-        deleteMemo(memo)
-    })
+    // deleteBtn.addEventListener('click', () => {
+    //     deleteMemo(memo)
+    // })
 
     // // 編集ボタンのクリックイベント
     // editBtn.addEventListener('click', () => {
@@ -53,12 +53,12 @@ function addNewMemo(text = '') {
     // })
 
     // テキストエリアのイベント
-    textArea.addEventListener('input', (e) => {
-        const { value } = e.target
-        main.innerHTML = marked(value)
-        // ローカルストレージの更新
-        updateLS()
-    })
+    // textArea.addEventListener('input', (e) => {
+    //     const { value } = e.target
+    //     main.innerHTML = marked(value)
+    //     // ローカルストレージの更新
+    //     updateLS()
+    // })
     // bodyの子要素として追加
     document.body.appendChild(memo)
 }
