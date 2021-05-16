@@ -4,38 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesomeを使う -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MemoKadai</title>
     <link rel="stylesheet" href="../prod/style.css">
+    <title>MemoKadai</title>
 </head>
-
-<body>
     <header>
-        <h1>MEMORO</h1>
+        <h1>Memorou<i class="fa fa-pencil "></i></h1>
     </header>
 
+<body>
     <main>
-        <input type="text" id="input">
-        <textarea id="text_area"></textarea>
-
-        <ul>
-            <li id="save">Save</li>
-            <li id="clear">Clear</li>
-        </ul>
-
+        <button class="add" id="add">
+            <!-- Font Awesomeアイコンの使用  -->
+            <i class="fa fa-plus"></i> Memorou
+        </button>
     </main>
 
 
-    <footer class="footer_title">
-        copyrights 2020 G's Academy Fukuoka All RIghts Reserved.
-    </footer>
+    <!-- 最終的にこれも動的にいれたい -->
+    <!-- <footer class="footer_title">
+        copyrights 2020/5 G's Academy Fukuoka All RIghts Reserved.
+    </footer> -->
 
     <!-- JQueryのプラグイン -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- MarkDown記法のプラグイン -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
     <script src="../prod/prod.js"></script>
-
 </body>
-
 </html>
