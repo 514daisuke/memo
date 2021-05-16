@@ -16,6 +16,19 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+    const array = [1,2,3,4,5];
+    console.log(array);
+    console.log(array.length);
+    for(let i =0; i < array.length; i++){
+      console.log(array[i]);
+    }
+    // 配列でやるので条件分岐
+    for(let x of array){
+      console.log(x);
+    }
+    array.forEach(function(x){
+      console.log(x);
+    })
 
   </script>
 </body>

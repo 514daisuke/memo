@@ -24,9 +24,22 @@
     ];
 
       // 内容を表示してみよう
+      console.log(classes);
       // - 「第2回授業」をalert()かconsole.log()で表示！
+      //alert(classes[2].event)
+      console.log(classes[2].event)
       // - 「2020/05/09」をalert()かconsole.log()で表示！
+      console.log(classes[1].date)
       // - 「第3回授業は2020/05/23です」をalert()かconsole.log()で表示！
+      console.log(classes[3].date)
+      console.log(classes[3].event+"は"+ classes[3].date+"です");
+      //$('echo').html(classes[3].date);
+      //$('echo').html(classes[3].event + "は" + classes[3].date + "です");
+      let data = "";
+      for(let i = 0; i < classes.length; i++){
+        data += '<p>' + classes[i].event+"は"+classes[i].date+'です</p>';
+      }
+      $('#echo').html(data);
 
   </script>
 </body>

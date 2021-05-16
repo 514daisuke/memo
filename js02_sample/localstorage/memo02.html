@@ -28,11 +28,40 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-    //1.Save クリックイベント
 
-    //2.clear クリックイベント
+      //1.Save クリックイベント
+      $('#save').on('click', function () {
+        const data = {
+          title: $('#input').val(),
+          text: $('#text_area').val(),
+        };
+        console.log(data);
+        // let title = $('#inputdata').val();
+        // let text = $('#text_area').val();
+        //const text = $('#text_area').val();
+        // localStorage.setItem('memo', data);
+        const JsonData = JSON.stringify(data);
+        console.log(JsonData);
+        localStorage.setItem('memo', JsonData);
+      });
 
-    //3.ページ読み込み：保存データ取得表示
+      //2.clear クリックイベント
+        $('#clear').on('click', function () {
+          localStorage.removeItem('memo');
+          //$('#input').val('');
+          $('#text_area').val('');
+        });
+
+      //3.ページ読み込み：保存データ取得表示
+      if (localStorage.getItem("memo")) {
+        const JsonData = localStorage.getItem("memo");
+        console.log(JsonData);
+        const data = JSON.parse(JsonData);
+
+        $('#input').val(data.title);
+        $('#text_area').val(data.text);
+
+      }
 
   </script>
 
