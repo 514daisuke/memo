@@ -1,4 +1,5 @@
 * {
+  
   box-sizing: border-box;
   outline: none;
 }
@@ -8,8 +9,13 @@ body{
     background-color: cornflowerblue;
     margin:0;
     padding:0;
+    padding-top: 3rem;
     text-align:left;
     font-size: 32px;
+    /* flexアイテムにする */
+    display: flex;
+   /* flexアイテムを複数行に分割 */
+    flex-wrap: wrap;
 
 }
 
@@ -24,26 +30,17 @@ header{
 
 }
 
-
 /* メイン処理 */
-
 main{
     border-bottom:1px solid #ccc;
     position:relative;
 }
 
 
-p{
-    font-size:200%;
-    text-align: center;
-    border-bottom:1px solid #fff;
-    height:200px;
-}
-
 /* addボタンの実装 */
 .add {
   position: fixed;
-  right: 1rem;
+  right: 2rem;
   background-color:chocolate;
   color: #fff;
   border: none;
@@ -52,50 +49,15 @@ p{
   cursor: pointer;
 }
 
-/* .add:active {
+.add:active {
   transform: scale(0.98);
-} */
-
-ul{
-    padding: 0;
-    border-top: 1px solid #000000;
-    display:table;  /* 定義 */
-    table-layout: fixed;
-    width:100%;
+  box-shadow: none;
 }
-
-li{
-    list-style-type:none;
-    border: 1px solid #666;
-    background-color: #FFF;
-    display:table-cell;  /* 定義 */
-    cursor: pointer;
-    justify-content: center;
-}
-
-li:hover{
-    background: #0066CC;
-    color:#fff;
-}
-
-input,textarea{
-    margin: 3%;
-    width: 95%;
-    font-size:80%;
-    box-shadow: 3px 3px 3px 3px #555;
-}
-input{
-    height: 30px;
-}
-textarea{
-    height: 230px;
-}
-
 
 .memo {
   background-color: #fff;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
-  margin: 30px 20px;
+  margin: 40px 20px;
   height: 400px;
   width: 400px;
   overflow-y: scroll;
@@ -125,6 +87,10 @@ textarea{
   height: 400px;
   width: 100%;
   padding: 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* フッター処理 */
