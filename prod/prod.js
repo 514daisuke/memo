@@ -23,10 +23,12 @@ function addNewMemo(text = '') {
     memo.classList.add('memo')
 
     // 操作要素作成
-    const editBtn = memo.querySelector('.edit')
+    //削除
     const deleteBtn = memo.querySelector('.delete')
+    //編集
+    //const editBtn = memo.querySelector('.edit')
     const main = memo.querySelector('.main')
-    const textArea = memo.querySelector('textarea')
+    //const textArea = memo.querySelector('textarea')
 
     // メモ帳を追加
     memo.innerHTML = `
@@ -45,10 +47,10 @@ function addNewMemo(text = '') {
         deleteMemo(memo)
     })
 
-    // 編集ボタンのクリックイベント
-    editBtn.addEventListener('click', () => {
-        editMemo(main, textArea)
-    })
+    // // 編集ボタンのクリックイベント
+    // editBtn.addEventListener('click', () => {
+    //     editMemo(main, textArea)
+    // })
 
     // テキストエリアのイベント
     textArea.addEventListener('input', (e) => {
@@ -81,11 +83,11 @@ function deleteMemo(memo) {
 }
 
 // メモ帳編集
-function editMemo(main, textArea) {
-  // hiddenがついているものは消し、ついてないものは付与する
-    main.classList.toggle('hidden')
-    textArea.classList.toggle('hidden')
-}
+// function editMemo(main, textArea) {
+//   // hiddenがついているものは消し、ついてないものは付与する
+//     main.classList.toggle('hidden')
+//     textArea.classList.toggle('hidden')
+// }
 
 
 
