@@ -3,6 +3,11 @@
   box-sizing: border-box;
   outline: none;
 }
+/* メイン処理 */
+main{
+    border-bottom:1px solid #ccc;
+    position:relative;
+}
 
 /* ボディ処理 */
 body{
@@ -14,10 +19,9 @@ body{
     font-size: 32px;
     /* flexアイテムにする */
     display: flex;
-   /* flexアイテムを複数行に分割 */
+    /* flexアイテムを複数行に分割 */
     flex-wrap: wrap;
-
-}
+} 
 
 /* ヘッダー処理 */
 header{
@@ -28,12 +32,6 @@ header{
     font-size:80%;
     box-shadow: 3px 3px 3px 3px #555;
 
-}
-
-/* メイン処理 */
-main{
-    border-bottom:1px solid #ccc;
-    position:relative;
 }
 
 
@@ -111,3 +109,4 @@ footer {
   color: white;
   padding: 20px;
 }
+

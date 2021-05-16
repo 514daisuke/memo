@@ -2,14 +2,23 @@
 
 //要素取得
 const addBtn = document.getElementById('add')
-//console.log(addBtn);
+//クリックされた回数をカウント
+let count = 0;
+function counter(){
+    count++;
+    console.log(count);
+}
+    console.log("------------");
+    console.log(count);
 
 //ローカルストレージからデータの取得
 const memos = JSON.parse(localStorage.getItem('memos'))
 
 // // メモ帳追加処理を実行 addNewMemo(memo)の処理
+for (let i = 0; i < 3; i++){
 if (memos) {
     memos.forEach(memo => addNewMemo(memo))
+}
 }
 
 //addボタンをクリックした場合の作成イベント
