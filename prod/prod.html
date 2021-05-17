@@ -11,22 +11,23 @@
     <title>MemoKadai</title>
 </head>
     <header>
-        <h1>Memorou<i class="fa fa-pencil "></i></h1>
+        <h1>MemorouApp<i class="fa fa-pencil "></i></h1>
+        <div id = "today"></div>
     </header>
-
 <body>
-    <main>
-        <button class="add" id="add">
+<!-- デフォルトmemo-->
+    <div></div>
+    <div>
+        <button class="add" id="add" onclick="counter()">
             <!-- Font Awesomeアイコンの使用  -->
-            <i class="fa fa-plus"></i> Memorou
+            <i class="fa fa-plus"></i> AddMemorou
         </button>
-    </main>
-
-
-    <!-- 最終的にこれも動的にいれたい -->
+    </div>
+    <!-- footerはそのままで最終的追加したい -->
     <!-- <footer class="footer_title">
-        copyrights 2020/5 G's Academy Fukuoka All RIghts Reserved.
-    </footer> -->
+            copyrights 2020/5/15 G's Academy Fukuoka All RIghts Reserved.
+        </footer> -->
+
 
     <!-- JQueryのプラグイン -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,4 +35,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
     <script src="../prod/prod.js"></script>
 </body>
+
 </html>

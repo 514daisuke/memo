@@ -4,21 +4,6 @@
   outline: none;
 }
 
-/* ボディ処理 */
-body{
-    background-color: cornflowerblue;
-    margin:0;
-    padding:0;
-    padding-top: 3rem;
-    text-align:left;
-    font-size: 32px;
-    /* flexアイテムにする */
-    display: flex;
-   /* flexアイテムを複数行に分割 */
-    flex-wrap: wrap;
-
-}
-
 /* ヘッダー処理 */
 header{
     background-color: #fff;
@@ -30,12 +15,18 @@ header{
 
 }
 
-/* メイン処理 */
-main{
-    border-bottom:1px solid #ccc;
-    position:relative;
+body{
+    background-color: cornflowerblue;
+    margin:0;
+    padding:0;
+    padding-top: 3rem;
+    text-align:left;
+    font-size: 32px;
+    /* flexアイテムにする */
+    display: flex;
+    /* flexアイテムを複数行に分割 */
+    flex-wrap: wrap;
 }
-
 
 /* addボタンの実装 */
 .add {
@@ -43,7 +34,6 @@ main{
   right: 2rem;
   background-color:chocolate;
   color: #fff;
-  border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -92,6 +82,7 @@ main{
 .hidden {
   display: none;
 }
+
 
 /* フッター処理 */
 footer {
