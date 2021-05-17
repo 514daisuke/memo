@@ -12,7 +12,6 @@ function counter() {
     document.getElementById("countmemo").innerHTML = count;
 }
 
-
 // 日付の操作
 let date = new Date();
 let month = date.getMonth() + 1;
@@ -20,6 +19,13 @@ let year = date.getFullYear();
 let day = date.getDate();
 
 document.getElementById("today").innerHTML = year + "年" + month + "月" + day + "日のメモ : " + "&nbsp";
+
+// マウスドロップ
+let memoDrop = document.getElementById("memoDrop");
+
+memoDrop.onmousedown = function (event) {
+    alert("デフォルトメモを触れてます");
+}
 
 
 //ローカルストレージからデータの取得
@@ -89,6 +95,7 @@ function addNewMemo(text = '') {
     document.body.appendChild(memo)
 }
 
+
 // ローカルストレージにメモ帳を保存
 function updateLS() {
 
@@ -121,3 +128,4 @@ function editMemo(main, textArea) {
     main.classList.toggle('hidden')
     textArea.classList.toggle('hidden')
 }
+
