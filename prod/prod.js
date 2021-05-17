@@ -30,46 +30,8 @@ if (memos) {
     memos.forEach(memo => addNewMemo(memo))
 }
 
-
-//デフォルトメモの処理
-function NewMemo(text = '') {
-    // 操作要素作成
-    //編集
-    const editBtn = memo.querySelector('.edit')
-    //削除
-    const deleteBtn = memo.querySelector('.delete')
-    //メイン
-    const main = memo.querySelector('.main')
-    //テキストエリア
-    const textArea = memo.querySelector('textarea')
-
-    // テキストエリアに引数で渡したテキストを代入（新規/編集）
-    textArea.value = text
-    // markedは、HTMLに追加したプラグイン
-    main.innerHTML = marked(text)
-
-    // 削除クリックイベント
-    deleteBtn.addEventListener('click', () => {
-        deleteMemo(memo)
-    })
-
-    // // 編集ボタンのクリックイベント
-    editBtn.addEventListener('click', () => {
-        editMemo(main, textArea)
-    })
-
-    // テキストエリアのイベント
-    textArea.addEventListener('input', (e) => {
-        const { value } = e.target
-        main.innerHTML = marked(value)
-        // ローカルストレージの更新
-        updateLS()
-    })
-}
-
 //addボタンをクリックした場合の作成イベント
 addBtn.addEventListener('click', () => addNewMemo())
-
 //関数
 function addNewMemo(text = '') {
     // div要素を作成
