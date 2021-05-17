@@ -2,16 +2,16 @@
 
 //要素取得
 const addBtn = document.getElementById('add')
-//クリックされた回数をカウント
 let count = 0;
-let num = 0;
+
 //メモの数のカウント
-function counter(){
+function counter() {
+//クリックされた回数をカウント
     count++;
     console.log(count);
-    let num = count;
+    document.getElementById("countmemo").innerHTML = count;
 }
-    console.log(num);
+
 
 // 日付の操作
 let date = new Date();
@@ -19,7 +19,7 @@ let month = date.getMonth() + 1;
 let year = date.getFullYear();
 let day = date.getDate();
 
-document.getElementById("today").innerHTML = year + "年" + month + "月" + day + "日のメモ";
+document.getElementById("today").innerHTML = year + "年" + month + "月" + day + "日のメモ : " + "&nbsp";
 
 
 //ローカルストレージからデータの取得

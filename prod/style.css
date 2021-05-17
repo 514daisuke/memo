@@ -15,6 +15,12 @@ header{
 
 }
 
+.memocount{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+
 body{
     background-color: cornflowerblue;
     margin:0;

@@ -12,11 +12,28 @@
 </head>
     <header>
         <h1>MemorouApp<i class="fa fa-pencil "></i></h1>
-        <div id = "today"></div>
+        <div class="memocount">
+            <div id = "today"></div>
+            <div id = "countmemo">0</div><div>個</div>
+        </div>
     </header>
 <body>
 <!-- デフォルトmemo-->
-    <div></div>
+    <div class="memo">
+        <div class="tools">
+            <button class="edit">
+                <i class="fa fa-edit">
+                </i>
+            </button>
+            <button class="delete">
+                <i class="fa fa-trash">
+                </i>
+            </button>
+        </div>
+        <div class="main hidden"></div>
+        <textarea class>
+        </textarea>
+    </div>
     <div>
         <button class="add" id="add" onclick="counter()">
             <!-- Font Awesomeアイコンの使用  -->
