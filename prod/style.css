@@ -15,6 +15,12 @@ header{
 
 }
 
+.memocount{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+
 body{
     background-color: cornflowerblue;
     margin:0;
@@ -31,7 +37,7 @@ body{
 /* addボタンの実装 */
 .add {
   position: fixed;
-  right: 2rem;
+  right: 11rem;
   background-color:chocolate;
   color: #fff;
   border-radius: 3px;
@@ -43,6 +49,23 @@ body{
   transform: scale(0.98);
   box-shadow: none;
 }
+
+/* clearボタンの実装 */
+.clear {
+  position: fixed;
+  right: 2rem;
+  background-color:darkgrey
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.clear:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
 
 .memo {
   background-color: #fff;
@@ -82,6 +105,51 @@ body{
 .hidden {
   display: none;
 }
+
+
+
+.memoDrop {
+  background-color: #fff;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 40px 20px;
+  height: 400px;
+  width: 400px;
+  overflow-y: scroll;
+}
+
+.memoDrop .tools {
+  background-color: #9ec862;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.memoDrop .tools .titletext {
+  font-family: inherit;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+
+.memoDrop .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.memoDrop textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  height: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
 
 
 /* フッター処理 */

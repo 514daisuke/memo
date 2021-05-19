@@ -12,17 +12,40 @@
 </head>
     <header>
         <h1>MemorouApp<i class="fa fa-pencil "></i></h1>
-        <div id = "today"></div>
+        <div class="memocount">
+            <div id = "today"></div>
+            <div id = "countmemo">0</div><div>個</div>
+        </div>
     </header>
 <body>
 <!-- デフォルトmemo-->
-    <div></div>
+    <div id = "memoDrop">
+        <div class="memoDrop">
+            <div class="tools">
+                <div class="titletext">今日のメモをとってみよう</div> 
+                <!-- <button class="edit">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button class="delete">
+                    <i class="fa fa-trash"></i>
+                </button> -->
+            </div>
+            <div class="main hidden"></div>
+                <textarea class></textarea>
+            </div>
+        </div>
     <div>
         <button class="add" id="add" onclick="counter()">
             <!-- Font Awesomeアイコンの使用  -->
             <i class="fa fa-plus"></i> AddMemorou
         </button>
     </div>
+    <div>
+        <button class="clear" id="clear">
+        <!-- Font Awesomeアイコンの使用  -->
+        <i class="fa fa-send "></i> ClearMemorou
+        </button>
+</div>
     <!-- footerはそのままで最終的追加したい -->
     <!-- <footer class="footer_title">
             copyrights 2020/5/15 G's Academy Fukuoka All RIghts Reserved.

@@ -2,16 +2,15 @@
 
 //要素取得
 const addBtn = document.getElementById('add')
-//クリックされた回数をカウント
 let count = 0;
-let num = 0;
-//メモの数のカウント
-function counter(){
+
+//メモの数のカウントアップ
+function counter() {
+//クリックされた回数をカウント
     count++;
     console.log(count);
-    let num = count;
+    document.getElementById("countmemo").innerHTML = count;
 }
-    console.log(num);
 
 // 日付の操作
 let date = new Date();
@@ -19,8 +18,11 @@ let month = date.getMonth() + 1;
 let year = date.getFullYear();
 let day = date.getDate();
 
-document.getElementById("today").innerHTML = year + "年" + month + "月" + day + "日のメモ";
+document.getElementById("today").innerHTML = year + "年" + month + "月" + day + "日のメモ : " + "&nbsp";
 
+
+// マウスタッチ
+let memoDrop = document.getElementById("memoDrop");
 
 //ローカルストレージからデータの取得
 const memos = JSON.parse(localStorage.getItem('memos'))
@@ -89,6 +91,7 @@ function addNewMemo(text = '') {
     document.body.appendChild(memo)
 }
 
+
 // ローカルストレージにメモ帳を保存
 function updateLS() {
 
@@ -106,13 +109,8 @@ function updateLS() {
 
 // メモ帳削除
 function deleteMemo(memo) {
-
     // 削除
     memo.remove()
-
-    // ローカルストレージの更新
-    updateLS()
-
 }
 
 // メモ帳編集
@@ -121,3 +119,9 @@ function editMemo(main, textArea) {
     main.classList.toggle('hidden')
     textArea.classList.toggle('hidden')
 }
+
+// クリアボタン メモ全体がクリアになる予定
+clear.addEventListener('click', () => {
+    localStorage.clear();
+    document.location.reload();
+    })
