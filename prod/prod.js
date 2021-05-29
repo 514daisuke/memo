@@ -22,7 +22,7 @@ document.getElementById("today").innerHTML = year + "年" + month + "月" + day 
 
 
 // マウスタッチ
-let memoDrop = document.getElementById("memoDrop");
+// let memoDrop = document.getElementById("memoDrop");
 
 //ローカルストレージからデータの取得
 const memos = JSON.parse(localStorage.getItem('memos'))
@@ -40,6 +40,8 @@ function addNewMemo(text = '') {
     const memo = document.createElement('div')
     // memoクラスの追加
     memo.classList.add('memo')
+
+    
 
     // メモ帳を追加
     memo.innerHTML = `
